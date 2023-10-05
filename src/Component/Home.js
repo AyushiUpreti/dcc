@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import './Home.css';
 import {motion} from "framer-motion";
-import dccVideo from '../Assests/DCC VIDEO Business Development 08-17 Rough.mp4'
+// import dccVideo from '../Assests/DCC VIDEO Business Development 08-17 Rough.mp4'
 
 const Home = () => {
 
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className='home-sec'>
       <div className="video-player">
-      <video src={dccVideo} loop={true} muted={isMuted} autoPlay={true} width="100%"/>
+      <video src="https://drive.google.com/file/d/1J2m7kX1ZnV-GYP6fVtlCSWEyz7r-waP3/view?usp=sharing" loop={true} muted={isMuted} autoPlay={true} width="100%"/>
       <button className='mute-button' onClick={() => setIsMuted(!isMuted)}>
       {isMuted ? '🔇' : '🔊'}
     </button>
