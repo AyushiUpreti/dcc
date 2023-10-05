@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 1px;
+    z-index: 10000; 
+    position: fixed; 
+    top: 0px; 
+    width: 100%;  
+    transition: background-color 0.5s ease; 
+    background-color:  rgb(28, 162, 203);
+}
+
+.navItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navItems li{
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.navItems li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;   
+    transition: 0.4s ease-in-out;
+}
+
+.navItems li a:hover,
+.navItems li a.active{
+    color: orange;
+}
+
+.navItems li a:hover::after,
+.navItems li a.active::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: orange;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile{
+    display: none;
+}
+
+
+@media screen and (max-width: 1163px){
+
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #mobile{
+        display: block;
+    }
+
+    .navItems{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: -1%;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: rgb(28, 162, 203);
+        padding: 40px 0px 0px 10px; 
+        transition: 0.6s ease-in-out;
+    }
+
+    .navItems.active{
+        right: 0px;
+    }
+
+    .navItems li{
+        margin-bottom: 30px;
+       
+    }
+
+    #mobile i{
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        position: absolute; 
+        top: 26%;
+        right: 40px;
+        /* background-color:rgb(28, 162, 203);
+        width: 30px;
+        height: 30px; 
+        border-radius: 50%;  */
+       
+    }
+    .navItems li a{
+        font-size: 1.4rem;
+    }
+    .dcc-logo{
+        width: 40%;
+    }
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.info{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.4rem;
+    padding: 40px 60px;
+    line-height: 2rem;
+    color: gray;
+}
+
+.btn-text {
+    position: relative;
+    padding: 18px 35px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid;
+    z-index: 1;
+    font-size: 20px; 
+    background-color: #5d015d;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s all ease;
+  }
+
+  .btn-text:hover {
+    color: white;
+    cursor: pointer;
+    border: 0px;
+  }
+
+  .btn-text:active {
+    transform: scale(0.85);
+  }
+
+  .btn-text:before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: -50%;
+    top: -100%;
+    background: rgb(28, 162, 203);
+    transition: all 0.6s ease;
+    z-index: -1;
+  }
+
+  .btn-text:hover:before {
+    top: 0;
+    left: 0;
+    border: 0px;
+    transform: rotate(180deg);
+  }
+
+  .btn-text:after {
+    content: "";
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    top: 100%;
+    background:rgb(28, 162, 203);
+    transition: all 0.6s ease;
+    z-index: -1;
+  }
+
+  .btn-text:hover:after {
+    top: 0;
+    left: 50%;
+    border: 0px;
+    transform: rotate(180deg);
+  }
+
+
+.home-sec{
+  padding-bottom: 8%;
+}
+
+.btn1{
+    text-align: center;
+} 
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+
+.header-img{
+  padding-top: 4.5%;
+}
+
+.video-player {
+  position: relative;
+  padding-top: 5%;
+}
+
+.mute-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width:500px) {
+    .info{
+        font-size: 1rem;
+        padding: 20px 30px;
+    }
+    .btn-text{
+        padding: 14px 28px;
+    }
+    .mute-button{
+      font-size:16px ;
+    }
+    .video-player{
+      padding-top: 12%;
+    }
+
+    
+}
+
+

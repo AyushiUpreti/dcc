@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin:0;
+  padding: 0;
+  padding-bottom: 10%;
+}
+
+/* SWIPER SLIDER */
+
+.swiper {
+  width: 100%;
+  padding-top: 8%;
+  padding-bottom: 450px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.carousel{
+  margin-bottom: 8%;
+  /* padding-top: 8px; */
+  /* background-color: #b2b7b9; */
+}
+/* AT RISK POPULATION */
+
+.heading{
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 6%;
+  font-family: 'Playfair Display', serif;
+}
+.heading1{
+  text-align: center;
+  font-size: 2.5rem;
+  color: #5d015d;
+  font-family: 'Playfair Display', serif;
+}
+.heading2{
+  text-align: center;
+  font-size: 2.5rem;
+  /* color: #EB541B; */
+  font-family: 'Playfair Display', serif;
+}
+.heading3{
+  text-align: center;
+  font-size: 2.5rem;
+  color: #EB541B;
+  font-family: 'Playfair Display', serif;
+}
+
+.Risk-container{
+  /* background-color: #5d015d; */
+  width: 100%;
+  /* color: white; */
+  padding: 8px;
+  padding-bottom: 10%;
+}
+.at-risk{
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-gap: 2.5rem;
+  text-align: center;
+  padding-top: 4rem;
+  /* padding-bottom: 2rem; */
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.risk-img{
+  width: 110%;
+  box-shadow: 0px 4px 10px 2px #5d015d;
+  transition-duration: 0.2s ;
+  border-radius: 20px;
+}
+
+.risk-img:hover{
+  transform: scale(1.14)
+}
+
+
+/* CAPABILTIES SECTION */
+
+.grid-container{
+  background-color: #5d015d;
+  width: 100%;
+  color: white;
+  padding: 8px;
+  padding-bottom: 10%;
+}
+.card{
+  width: 80%;
+  overflow: hidden;   
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  /* border: 2px solid green; */
+}
+
+.card-info{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -100%;
+  backdrop-filter: blur(8px);
+  transition: 1s ;
+}
+.hover-info{
+  /* width: 90%; */
+  text-align: center;
+  color: black;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-top: 15%;
+}
+
+.card:hover .card-info{
+  right: 0;
+  cursor: pointer;
+}
+
+
+.experts{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 1rem;
+  text-align: center;
+  padding-top: 4rem;
+  /* padding-bottom: 2rem; */
+  padding-left: 5rem;
+  /* padding-right: 7rem; */
+  cursor: pointer;
+ 
+}
+
+.box{
+  width: 300px;
+  height: 350px;
+}
+
+.expert-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* box-shadow: 0px 4px 10px 2px #d8dde0; */
+  border-radius: 20px;
+  transition-duration: 0.2s;
+  /* object-fit: cover; */
+}
+/* .risk-img:hover{
+  transform: scale(1.06);
+} */
+
+.btn{
+  padding: 10px 25px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 2px solid;
+  z-index: 1;
+  font-size: 20px; 
+  background-color: #EB541B;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+.btn:hover{
+  background-color: transparent;
+  color: #EB541B;
+  transform: scale(1.06);
+}
+.hover-info p{
+  padding-left: 15px;
+  text-align: left;
+}
+
+.case-btn{
+  padding-top: 3%;
+  /* padding-bottom: 8%; */
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+
+ @media (max-width:1172px) {
+  .experts{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-left: 8rem;
+    padding-right: 0;
+    
+  }
+}
+@media (max-width:856px){
+  .experts{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding-left: 8rem;
+    padding-right: 0;
+  }
+  /* .risk-img{
+    width: 80%;
+  } */
+  .swiper-slide img{
+    width: 80%;
+  }
+  .case-btn{
+    text-align: center;
+  }
+  .btn{
+    padding: 5px 10px;
+  }
+} 
+
+@media (max-width:650px) {
+  .heading, .heading2{
+    font-size: 1.5rem;
+  }
+}
